@@ -100,6 +100,32 @@ h6 {
     transform: translatex(0px);
   }
 }
+/* ====ANIMATION==================================================================================================================================================== */
+._hide {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 1.3s ease 0s;
+}
+
+._hide2 {
+  transform: translate(120%, 0px);
+  opacity: 0;
+  transition: all 1.8s ease 0s;
+}
+
+._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 1.3s ease 0.1s;
+}
+
+._active2 {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 1.8s ease 0.3s;
+}
+
+/* ====ANIMATION=END=================================================================================================================================================== */
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -110,50 +136,43 @@ body {
   position: relative;
 }
 
+.mria-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+@media (max-width: 1023.98px) {
+  .mria-svg {
+    top: -25px;
+  }
+}
+@media (max-width: 899.98px) {
+  .mria-svg {
+    top: -60px;
+  }
+}
+@media (max-width: 700.98px) {
+  .mria-svg {
+    top: -80px;
+  }
+}
+@media (max-width: 550.98px) {
+  .mria-svg {
+    top: -100px;
+  }
+}
+@media (max-width: 400.98px) {
+  .mria-svg {
+    top: -110px;
+  }
+}
+
 h1 {
   position: absolute;
   top: 0;
-  left: -60px;
-  font-weight: 700;
-  font-size: 450px;
-  line-height: 300px;
-  color: rgba(255, 255, 255, 0.35);
-  z-index: 2;
-}
-@media (max-width: 1439.98px) {
-  h1 {
-    font-size: 350px;
-    left: -40px;
-    line-height: 230px;
-  }
-}
-@media (max-width: 1023.98px) {
-  h1 {
-    font-size: 270px;
-    left: -30px;
-    line-height: 180px;
-  }
-}
-@media (max-width: 767.98px) {
-  h1 {
-    font-size: 200px;
-    left: -20px;
-    line-height: 110px;
-  }
-}
-@media (max-width: 600.98px) {
-  h1 {
-    font-size: 160px;
-    left: -20px;
-    line-height: 110px;
-  }
-}
-@media (max-width: 429.98px) {
-  h1 {
-    font-size: 105px;
-    left: -10px;
-    line-height: 70px;
-  }
+  left: 0;
+  visibility: hidden;
 }
 
 .wrapper {
@@ -227,6 +246,7 @@ h1 {
   right: 0;
   bottom: -80px;
   animation: float 6s ease-in-out infinite;
+  z-index: 3;
 }
 @media (max-width: 1150.98px) {
   .first-fullscreen__body h2 {
@@ -306,6 +326,10 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.second-fullscreen__body {
+  margin-top: -130px;
+}
+
 .third-fullscreen {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), url("../img/section3bg.webp") left bottom no-repeat fixed;
   background-size: cover;
@@ -385,32 +409,6 @@ h1 {
   line-height: 122.5%; /* 49/40 */
 }
 
-/* ====ANIMATION==================================================================================================================================================== */
-._hide {
-  transform: translate(0px, 120%);
-  opacity: 0;
-  transition: all 1.3s ease 0s;
-}
-
-._hide2 {
-  transform: translate(120%, 0px);
-  opacity: 0;
-  transition: all 1.3s ease 0s;
-}
-
-._active {
-  transform: translate(0px, 0px);
-  opacity: 1;
-  transition: all 1.3s ease 0s;
-}
-
-._active2 {
-  transform: translate(0px, 0px);
-  opacity: 1;
-  transition: all 1.5s ease 0.3s;
-}
-
-/* ====ANIMATION=END=================================================================================================================================================== */
 .message_box {
   width: 90%;
   max-width: 640px;
