@@ -258,7 +258,7 @@ h1 {
 @media (max-width: 767.98px) {
   .first-fullscreen__body {
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) top/100% 20% no-repeat, url("../img/section1bg.webp") left bottom no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) top/100% 20% no-repeat, url("../img/section1bg.webp") center bottom no-repeat fixed;
   }
   .first-fullscreen__body h2 {
     text-align: center;
