@@ -203,6 +203,11 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1023.98px) {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat,
+            url("../img/section1bg.webp") center bottom no-repeat fixed;
+        background-size: cover;
+    }
     &__body {
         position: relative;
         padding-top: 200px;
