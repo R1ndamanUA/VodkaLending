@@ -337,6 +337,12 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1179.98px) {
+  .third-fullscreen {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/section3bg.webp") 83% bottom no-repeat fixed;
+    background-size: cover;
+  }
+}
 .third-fullscreen__body h2 {
   max-width: 630px;
 }
