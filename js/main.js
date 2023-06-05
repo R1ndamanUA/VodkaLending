@@ -37,74 +37,38 @@ $(document).ready(function() {
 //=========END COOKIE AND AGE===============================================================================================================================================
   
 // =======Animation for TITLE=================================================================================================================================================
-
 // const animItems = document.querySelectorAll('._anim-items');
 
 // if (animItems.length > 0) {
-// 	window.addEventListener('scroll', animOnScroll);
-// 	function animOnScroll() {
-// 		$('*').off('scroll', animOnScroll);
-// 		for (let index = 0; index < animItems.length; index++) {
-// 			const animItem = animItems[index];
-// 			const animItemHeight = animItem.offsetHeight;
-// 			const animItemOffset = offset(animItem).top;
-// 			const animStart = 4;
+//   window.addEventListener('scroll', animOnScroll);
 
-// 			let animItemPoint = window.innerHeight - animItemHeight / animStart;
-// 			if (animItemHeight > window.innerHeight) {
-// 				animItemPoint = window.innerHeight - window.innerHeight / animStart;
-// 			}
+//   function animOnScroll() {
+//     for (let index = 0; index < animItems.length; index++) {
+//       const animItem = animItems[index];
+//       const animItemHeight = animItem.offsetHeight;
+//       const animItemOffset = animItem.getBoundingClientRect().top;
+//       const animStart = 4;
 
-// 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-// 				animItem.classList.add('_active');
+//       let animItemPoint = window.innerHeight - animItemHeight / animStart;
+//       if (animItemHeight > window.innerHeight) {
+//         animItemPoint = window.innerHeight - window.innerHeight / animStart;
+//       }
 
-// 			} else {
-// 				if (!animItem.classList.contains('_anim-no-hide')) {
-// 					animItem.classList.remove('_active');
-// 				}
-// 			}
-// 		}
-// 	}
-// 	function offset(el) {
-// 		const rect = el.getBoundingClientRect(),
-// 			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-// 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-// 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-// 	}
-// 	animOnScroll();
+//       if (
+//         window.pageYOffset > animItemOffset - animItemPoint &&
+//         window.pageYOffset < animItemOffset + animItemHeight
+//       ) {
+//         animItem.classList.add('_active');
+//       } else {
+//         if (!animItem.classList.contains('_anim-no-hide')) {
+//           animItem.classList.remove('_active');
+//         }
+//       }
+//     }
+//   }
+
+//   animOnScroll();
 // }
-const animItems = document.querySelectorAll('._anim-items');
-
-if (animItems.length > 0) {
-  window.addEventListener('scroll', animOnScroll);
-
-  function animOnScroll() {
-    for (let index = 0; index < animItems.length; index++) {
-      const animItem = animItems[index];
-      const animItemHeight = animItem.offsetHeight;
-      const animItemOffset = animItem.getBoundingClientRect().top;
-      const animStart = 4;
-
-      let animItemPoint = window.innerHeight - animItemHeight / animStart;
-      if (animItemHeight > window.innerHeight) {
-        animItemPoint = window.innerHeight - window.innerHeight / animStart;
-      }
-
-      if (
-        window.pageYOffset > animItemOffset - animItemPoint &&
-        window.pageYOffset < animItemOffset + animItemHeight
-      ) {
-        animItem.classList.add('_active');
-      } else {
-        if (!animItem.classList.contains('_anim-no-hide')) {
-          animItem.classList.remove('_active');
-        }
-      }
-    }
-  }
-
-  animOnScroll();
-}
 
 //=======Animation for TEXT and bottle=================================================================================================================================================
 
@@ -155,3 +119,72 @@ if (animItems.length > 0) {
 
 //   animOnScroll();
 // }
+const animItems = document.querySelectorAll('._anim-items');
+const animItems3 = document.querySelectorAll('._anim-items3');
+
+if (animItems.length > 0 || animItems3.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
+  window.addEventListener('resize', animOnScroll);
+
+  function animOnScroll() {
+    const windowHeight = window.innerHeight;
+    const pageYOffset = window.pageYOffset;
+
+    // Для первого набора элементов
+    for (let index = 0; index < animItems.length; index++) {
+      const animItem = animItems[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = animItem.getBoundingClientRect().top;
+      const animStart = 4;
+
+      let animItemPoint = windowHeight - animItemHeight / animStart;
+      if (animItemHeight > windowHeight) {
+        animItemPoint = windowHeight - windowHeight / animStart;
+      }
+
+      if (
+        pageYOffset > animItemOffset - animItemPoint &&
+        pageYOffset < animItemOffset + animItemHeight
+      ) {
+        animItem.classList.add('_active');
+      } else {
+        if (!animItem.classList.contains('_anim-no-hide')) {
+          animItem.classList.remove('_active');
+        }
+      }
+    }
+
+    // Для второго набора элементов
+    for (let index = 0; index < animItems3.length; index++) {
+      const animItem = animItems3[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = animItem.getBoundingClientRect().top;
+      const animStart = 0.2;
+
+      let animItemPoint = windowHeight - animItemHeight * animStart;
+
+      if (window.innerWidth <= 768) {
+        if (
+          pageYOffset > animItemOffset - windowHeight + animItemHeight - animItemPoint &&
+          pageYOffset < animItemOffset + animItemHeight
+        ) {
+          animItem.classList.add('_active2');
+        } else {
+          if (!animItem.classList.contains('_anim-no-hide')) {
+            animItem.classList.remove('_active2');
+          }
+        }
+      } else {
+        if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
+          animItem.classList.add('_active');
+        } else {
+          if (!animItem.classList.contains('_anim-no-hide')) {
+            animItem.classList.remove('_active2');
+          }
+        }
+      }
+    }
+  }
+
+  animOnScroll();
+}
