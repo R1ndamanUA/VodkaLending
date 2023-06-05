@@ -319,8 +319,10 @@ h1 {
     display: flex;
     flex-direction: column;
     @media (max-width: 1179.98px) {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url("../img/section3bg.webp") 83% bottom no-repeat fixed;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/section3bg.webp");
+        background-position: 83% bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         // background-size: cover;
     }
     &__body {
@@ -333,7 +335,10 @@ h1 {
     }
 }
 .fourth-fullscreen {
-    background: url("../img/section4bg.webp") left bottom no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/section4bg.webp");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     // background-size: cover;
     overflow: hidden;
     display: flex;
