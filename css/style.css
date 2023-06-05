@@ -293,7 +293,10 @@ h1 {
 }
 
 .third-fullscreen {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), url("../img/section3bg.webp") left bottom no-repeat fixed;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), url("../img/section3bg.webp");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -301,7 +304,6 @@ h1 {
 @media (max-width: 1179.98px) {
   .third-fullscreen {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/section3bg.webp");
-    background-position: 83% bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -318,6 +320,7 @@ h1 {
   background-position: left bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: contain;
   overflow: hidden;
   display: flex;
   flex-direction: column;
