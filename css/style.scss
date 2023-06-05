@@ -221,9 +221,7 @@ h1 {
     flex-direction: column;
     background-attachment: fixed;
     @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        .your-class {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
     }
     @media (max-width: 1023.98px) {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat,
@@ -231,9 +229,7 @@ h1 {
         background-size: cover;
         background-attachment: fixed;
         @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-            .your-class {
-                background-attachment: scroll;
-            }
+            background-attachment: scroll;
         }
     }
     &__body {
@@ -321,9 +317,7 @@ h1 {
     flex-direction: column;
     background-attachment: fixed;
     @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        .your-class {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
     }
     &__body {
         margin-top: -130px;
@@ -338,9 +332,7 @@ h1 {
     flex-direction: column;
     background-attachment: fixed;
     @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        .your-class {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
     }
     @media (max-width: 1179.98px) {
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -348,9 +340,7 @@ h1 {
         background-size: cover;
         background-attachment: fixed;
         @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-            .your-class {
-                background-attachment: scroll;
-            }
+            background-attachment: scroll;
         }
     }
     &__body {
@@ -371,9 +361,7 @@ h1 {
     flex-direction: column;
     background-attachment: fixed;
     @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        .your-class {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
     }
     &__body {
         & h2 {

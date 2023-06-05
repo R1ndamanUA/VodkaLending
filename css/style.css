@@ -233,7 +233,7 @@ h1 {
   background-attachment: fixed;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .first-fullscreen .your-class {
+  .first-fullscreen {
     background-attachment: scroll;
   }
 }
@@ -245,7 +245,7 @@ h1 {
   }
 }
 @media only screen and (max-width: 1023.98px) and (-webkit-min-device-pixel-ratio: 0) {
-  .first-fullscreen .your-class {
+  .first-fullscreen {
     background-attachment: scroll;
   }
 }
@@ -340,7 +340,7 @@ h1 {
   background-attachment: fixed;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .second-fullscreen .your-class {
+  .second-fullscreen {
     background-attachment: scroll;
   }
 }
@@ -357,7 +357,7 @@ h1 {
   background-attachment: fixed;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .third-fullscreen .your-class {
+  .third-fullscreen {
     background-attachment: scroll;
   }
 }
@@ -369,7 +369,7 @@ h1 {
   }
 }
 @media only screen and (max-width: 1179.98px) and (-webkit-min-device-pixel-ratio: 0) {
-  .third-fullscreen .your-class {
+  .third-fullscreen {
     background-attachment: scroll;
   }
 }
@@ -389,7 +389,7 @@ h1 {
   background-attachment: fixed;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .fourth-fullscreen .your-class {
+  .fourth-fullscreen {
     background-attachment: scroll;
   }
 }
