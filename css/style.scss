@@ -214,7 +214,7 @@ h1 {
 }
 
 .first-fullscreen {
-    background: url("../img/section1bg.webp") left bottom no-repeat fixed;
+    background: url("../img/section1bg.webp") left bottom no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     overflow: hidden;
@@ -222,7 +222,7 @@ h1 {
     flex-direction: column;
     @media (max-width: 1023.98px) {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat,
-            url("../img/section1bg.webp") center bottom no-repeat fixed;
+            url("../img/section1bg.webp") center bottom no-repeat;
         background-size: cover;
         -webkit-background-size: cover;
     }
@@ -304,7 +304,7 @@ h1 {
 }
 .second-fullscreen {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3)),
-        url("../img/section2bg.webp") left bottom no-repeat fixed;
+        url("../img/section2bg.webp") left bottom no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     overflow: hidden;
@@ -318,7 +318,7 @@ h1 {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), url("../img/section3bg.webp");
     background-position: left bottom;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     overflow: hidden;
@@ -328,7 +328,7 @@ h1 {
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/section3bg.webp");
         background-position: 83% bottom;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        // background-attachment: fixed;
         background-size: cover;
         -webkit-background-size: cover;
     }
@@ -345,7 +345,7 @@ h1 {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/section4bg.webp");
     background-position: left bottom;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     overflow: hidden;
