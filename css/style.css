@@ -234,7 +234,6 @@ h1 {
 @media (max-width: 1023.98px) {
   .first-fullscreen {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat, url("../img/section1bg.webp") center bottom no-repeat;
-    background-size: cover;
   }
 }
 .first-fullscreen__body {
@@ -321,7 +320,6 @@ h1 {
 
 .second-fullscreen {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3)), url("../img/section2bg.webp") left bottom no-repeat;
-  background-size: cover;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -332,7 +330,6 @@ h1 {
 
 .third-fullscreen {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), url("../img/section3bg.webp") left bottom no-repeat;
-  background-size: cover;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -340,7 +337,6 @@ h1 {
 @media (max-width: 1179.98px) {
   .third-fullscreen {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/section3bg.webp") 83% bottom no-repeat;
-    background-size: cover;
   }
 }
 .third-fullscreen__body h2 {
@@ -352,7 +348,6 @@ h1 {
 
 .fourth-fullscreen {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)), url("../img/section4bg.webp") left bottom no-repeat;
-  background-size: cover;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -362,6 +357,15 @@ h1 {
 }
 .fourth-fullscreen__body p {
   max-width: 630px;
+}
+
+.bg-cover {
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
 
 .footer {

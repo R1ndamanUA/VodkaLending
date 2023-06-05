@@ -157,10 +157,8 @@ $(document).ready(function() {
     }
   });
 //=========END COOKIE AND AGE===============================================================================================================================================
-   // Определение операционной системы пользователя с помощью JavaScript
-   var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-   // Добавление класса к <html> элементу, если устройство на iOS
-   if (isIOS) {
-     document.documentElement.classList.add('ios');
-   }
+var device = navigator.userAgent.toLowerCase();
+var mob = device.match(/iphone|ipad|ipod/);
+        if (mob) {
+            $(".bg-cover").removeClass("bg-fixed");
+        }
