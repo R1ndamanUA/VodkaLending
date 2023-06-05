@@ -332,138 +332,137 @@ h1 {
         }
     }
 }
-.fourth-fullscreen {
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)),
-        url("../img/section4bg.webp") left bottom no-repeat fixed;
-    background-size: cover;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    &__body {
-        & h2 {
-            max-width: 630px;
-        }
-        & p {
-            max-width: 630px;
-        }
-    }
-}
-.footer {
-    background: #193b6f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 81px 20px 53px 20px;
-    gap: 20px;
-    &__title {
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 120%; /* 30/25 */
-        color: #47dfe9;
-        text-align: center;
-    }
+// .fourth-fullscreen {
+//     background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)),
+//         url("../img/section4bg.webp") left bottom no-repeat fixed;
+//     background-size: cover;
+//     overflow: hidden;
+//     display: flex;
+//     flex-direction: column;
+//     &__body {
+//         & h2 {
+//             max-width: 630px;
+//         }
+//         & p {
+//             max-width: 630px;
+//         }
+//     }
+// }
+// .footer {
+//     background: #193b6f;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 81px 20px 53px 20px;
+//     gap: 20px;
+//     &__title {
+//         font-weight: 600;
+//         font-size: 25px;
+//         line-height: 120%; /* 30/25 */
+//         color: #47dfe9;
+//         text-align: center;
+//     }
 
-    &__social {
-        display: flex;
-        gap: 22px;
-        margin-bottom: 40px;
-        transition: all ease 0.3s;
-        svg:hover {
-            path:nth-child(1) {
-                stroke: #ffffff;
-                transition: all ease 0.3s;
-            }
-            path:nth-child(2) {
-                stroke: #ffffff;
-                transition: all ease 0.3s;
-            }
-            path:nth-child(3) {
-                stroke: #ffffff;
-                fill: #ffffff;
-                transition: all ease 0.3s;
-            }
-        }
-    }
+//     &__social {
+//         display: flex;
+//         gap: 22px;
+//         margin-bottom: 40px;
+//         transition: all ease 0.3s;
+//         svg:hover {
+//             path:nth-child(1) {
+//                 stroke: #ffffff;
+//                 transition: all ease 0.3s;
+//             }
+//             path:nth-child(2) {
+//                 stroke: #ffffff;
+//                 transition: all ease 0.3s;
+//             }
+//             path:nth-child(3) {
+//                 stroke: #ffffff;
+//                 fill: #ffffff;
+//                 transition: all ease 0.3s;
+//             }
+//         }
+//     }
 
-    &__email {
-        font-size: 18px;
-        line-height: 22px;
-        text-decoration-line: underline;
-        color: #47dfe9;
-        transition: all ease 0.3s;
-        &:hover {
-            color: #ffffff;
-            transition: all ease 0.3s;
-        }
-    }
+//     &__email {
+//         font-size: 18px;
+//         line-height: 22px;
+//         text-decoration-line: underline;
+//         color: #47dfe9;
+//         transition: all ease 0.3s;
+//         &:hover {
+//             color: #ffffff;
+//             transition: all ease 0.3s;
+//         }
+//     }
 
-    &__logo {
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 122.5%; /* 49/40 */
-    }
-}
+//     &__logo {
+//         font-weight: 700;
+//         font-size: 40px;
+//         line-height: 122.5%; /* 49/40 */
+//     }
+// }
 
-//===========AGE CHECK=============================================================================================================================================
+// //===========AGE CHECK=============================================================================================================================================
 
-.message_box {
-    width: 90%;
-    max-width: 640px;
-    margin: 10% auto 0;
-    text-align: center;
-    background: #fff url("https://github.com/demersdesigns/ds_landing/blob/master/img/message_box_bg.png?raw=true")
-        center 20px no-repeat;
-    position: relative;
-    border-radius: 5px;
-    padding: 30px;
-    z-index: 1001;
-}
+// .message_box {
+//     width: 90%;
+//     max-width: 640px;
+//     margin: 10% auto 0;
+//     text-align: center;
+//     background: #fff center 20px no-repeat;
+//     position: relative;
+//     border-radius: 5px;
+//     padding: 30px;
+//     z-index: 1001;
+// }
 
-a[class="btn"] {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0.5em;
-    background: #fff;
-    border: 1px solid #193b6f;
-    border-radius: 5px;
-    color: #193b6f;
-    transition: all 0.5s;
-    width: 75px;
-    &:hover {
-        color: #fff;
-        border: 1px solid #fff;
-        background: #193b6f;
-    }
-}
-.age {
-    &_check {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        display: none;
-        backdrop-filter: blur(10px);
-        overflow: hidden;
-    }
-}
-.message {
-    &_box {
-        box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
+// a[class="btn"] {
+//     display: inline-block;
+//     margin: 0 auto;
+//     padding: 0.5em;
+//     background: #fff;
+//     border: 1px solid #193b6f;
+//     border-radius: 5px;
+//     color: #193b6f;
+//     transition: all 0.5s;
+//     width: 75px;
+//     &:hover {
+//         color: #fff;
+//         border: 1px solid #fff;
+//         background: #193b6f;
+//     }
+// }
+// .age {
+//     &_check {
+//         height: 100%;
+//         width: 100%;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         z-index: 1000;
+//         display: none;
+//         backdrop-filter: blur(10px);
+//         overflow: hidden;
+//     }
+// }
+// .message {
+//     &_box {
+//         box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
 
-        a:nth-child(2) {
-            margin-right: 20px;
-        }
-        h3 {
-            color: #193b6f;
-            font-size: 24px;
-            margin-bottom: 30px;
-            span {
-                color: #e20d0d;
-                font-size: 28px;
-                font-weight: 700;
-            }
-        }
-    }
-}
+//         a:nth-child(2) {
+//             margin-right: 20px;
+//         }
+//         h3 {
+//             color: #193b6f;
+//             font-size: 24px;
+//             margin-bottom: 30px;
+//             span {
+//                 color: #e20d0d;
+//                 font-size: 28px;
+//                 font-weight: 700;
+//             }
+//         }
+//     }
+// }
