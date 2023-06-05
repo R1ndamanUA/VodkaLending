@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 /*Обнуление*/
 * {
     padding: 0;
@@ -116,12 +129,12 @@ h6 {
 ._active {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 1.3s ease 0.1s;
+    transition: all 1.3s ease 0s;
 }
 ._active2 {
     transform: translate(0px, 0px);
     opacity: 1;
-    transition: all 1.8s ease 0.3s;
+    transition: all 1.8s ease 0s;
 }
 
 /* ====ANIMATION=END=================================================================================================================================================== */
