@@ -1,130 +1,130 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-/*Обнуление*/
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+// /*Обнуление*/
+// * {
+//     padding: 0;
+//     margin: 0;
+//     border: 0;
+// }
 
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+// *,
+// *:before,
+// *:after {
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
 
-:focus,
-:active {
-    outline: none;
-}
+// :focus,
+// :active {
+//     outline: none;
+// }
 
-a:focus,
-a:active {
-    outline: none;
-}
+// a:focus,
+// a:active {
+//     outline: none;
+// }
 
-nav,
-footer,
-header,
-aside {
-    display: block;
-}
+// nav,
+// footer,
+// header,
+// aside {
+//     display: block;
+// }
 
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
+// html,
+// body {
+//     height: 100%;
+//     width: 100%;
+//     font-size: 100%;
+//     line-height: 1;
+//     font-size: 14px;
+//     -ms-text-size-adjust: 100%;
+//     -moz-text-size-adjust: 100%;
+//     -webkit-text-size-adjust: 100%;
+// }
 
-input,
-button,
-textarea {
-    font-family: inherit;
-}
+// input,
+// button,
+// textarea {
+//     font-family: inherit;
+// }
 
-input::-ms-clear {
-    display: none;
-}
+// input::-ms-clear {
+//     display: none;
+// }
 
-button {
-    cursor: pointer;
-}
+// button {
+//     cursor: pointer;
+// }
 
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
+// button::-moz-focus-inner {
+//     padding: 0;
+//     border: 0;
+// }
 
-a,
-a:visited {
-    text-decoration: none;
-}
+// a,
+// a:visited {
+//     text-decoration: none;
+// }
 
-a:hover {
-    text-decoration: none;
-}
+// a:hover {
+//     text-decoration: none;
+// }
 
-ul li {
-    list-style: none;
-}
+// ul li {
+//     list-style: none;
+// }
 
-img {
-    vertical-align: top;
-}
+// img {
+//     vertical-align: top;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-size: inherit;
+//     font-weight: inherit;
+// }
 
-/*--------------------*/
-@keyframes float {
-    0% {
-        transform: translatex(0px);
-    }
-    50% {
-        transform: translatex(-20px);
-    }
-    100% {
-        transform: translatex(0px);
-    }
-}
-/* ====ANIMATION==================================================================================================================================================== */
-._hide {
-    transform: translate(0px, 120%);
-    opacity: 0;
-    transition: all 1.3s ease 0s;
-}
-._hide2 {
-    transform: translate(120%, 0px);
-    opacity: 0;
-    transition: all 1.8s ease 0s;
-}
+// /*--------------------*/
+// @keyframes float {
+//     0% {
+//         transform: translatex(0px);
+//     }
+//     50% {
+//         transform: translatex(-20px);
+//     }
+//     100% {
+//         transform: translatex(0px);
+//     }
+// }
+// /* ====ANIMATION==================================================================================================================================================== */
+// ._hide {
+//     transform: translate(0px, 120%);
+//     opacity: 0;
+//     transition: all 1.3s ease 0s;
+// }
+// ._hide2 {
+//     transform: translate(120%, 0px);
+//     opacity: 0;
+//     transition: all 1.8s ease 0s;
+// }
 
-._active {
-    transform: translate(0px, 0px);
-    opacity: 1;
-    transition: all 1.3s ease 0.1s;
-}
-._active2 {
-    transform: translate(0px, 0px);
-    opacity: 1;
-    transition: all 1.8s ease 0.3s;
-}
+// ._active {
+//     transform: translate(0px, 0px);
+//     opacity: 1;
+//     transition: all 1.3s ease 0.1s;
+// }
+// ._active2 {
+//     transform: translate(0px, 0px);
+//     opacity: 1;
+//     transition: all 1.8s ease 0.3s;
+// }
 
-/* ====ANIMATION=END=================================================================================================================================================== */
+// /* ====ANIMATION=END=================================================================================================================================================== */
 html,
 body {
     font-family: "Montserrat", sans-serif;
