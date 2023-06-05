@@ -230,23 +230,11 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .first-fullscreen {
-    background-attachment: scroll;
-  }
 }
 @media (max-width: 1023.98px) {
   .first-fullscreen {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat, url("../img/section1bg.webp") center bottom no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-  }
-}
-@media only screen and (max-width: 1023.98px) and (-webkit-min-device-pixel-ratio: 0) {
-  .first-fullscreen {
-    background-attachment: scroll;
   }
 }
 .first-fullscreen__body {
@@ -337,12 +325,6 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .second-fullscreen {
-    background-attachment: scroll;
-  }
 }
 .second-fullscreen__body {
   margin-top: -130px;
@@ -354,23 +336,11 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .third-fullscreen {
-    background-attachment: scroll;
-  }
 }
 @media (max-width: 1179.98px) {
   .third-fullscreen {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/section3bg.webp") 83% bottom no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-  }
-}
-@media only screen and (max-width: 1179.98px) and (-webkit-min-device-pixel-ratio: 0) {
-  .third-fullscreen {
-    background-attachment: scroll;
   }
 }
 .third-fullscreen__body h2 {
@@ -386,12 +356,6 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-attachment: fixed;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 0) {
-  .fourth-fullscreen {
-    background-attachment: scroll;
-  }
 }
 .fourth-fullscreen__body h2 {
   max-width: 630px;
@@ -507,4 +471,12 @@ a[class=btn]:hover {
   color: #e20d0d;
   font-size: 28px;
   font-weight: 700;
+}
+
+.bg-attachment {
+  background-attachment: fixed;
+}
+
+.ios .bg-attachment {
+  background-attachment: scroll;
 }

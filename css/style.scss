@@ -219,18 +219,10 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-attachment: fixed;
-    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        background-attachment: scroll;
-    }
     @media (max-width: 1023.98px) {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat,
             url("../img/section1bg.webp") center bottom no-repeat;
         background-size: cover;
-        background-attachment: fixed;
-        @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-            background-attachment: scroll;
-        }
     }
     &__body {
         position: relative;
@@ -315,10 +307,6 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-attachment: fixed;
-    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        background-attachment: scroll;
-    }
     &__body {
         margin-top: -130px;
     }
@@ -330,18 +318,10 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-attachment: fixed;
-    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        background-attachment: scroll;
-    }
     @media (max-width: 1179.98px) {
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
             url("../img/section3bg.webp") 83% bottom no-repeat;
         background-size: cover;
-        background-attachment: fixed;
-        @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-            background-attachment: scroll;
-        }
     }
     &__body {
         & h2 {
@@ -359,10 +339,6 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-attachment: fixed;
-    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
-        background-attachment: scroll;
-    }
     &__body {
         & h2 {
             max-width: 630px;
@@ -490,4 +466,10 @@ a[class="btn"] {
             }
         }
     }
+}
+.bg-attachment {
+    background-attachment: fixed;
+}
+.ios .bg-attachment {
+    background-attachment: scroll;
 }
