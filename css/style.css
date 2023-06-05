@@ -89,6 +89,17 @@ h6 {
 }
 
 /*--------------------*/
+@keyframes float {
+  0% {
+    transform: translatex(0px);
+  }
+  50% {
+    transform: translatex(-20px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
 /* ====ANIMATION==================================================================================================================================================== */
 /* ====ANIMATION=END=================================================================================================================================================== */
 html,
@@ -301,7 +312,6 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -326,8 +336,7 @@ h1 {
   background-position: left bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: auto;
-  overflow: hidden;
+  background-size: cover;
   display: flex;
   flex-direction: column;
 }
