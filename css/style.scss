@@ -102,27 +102,27 @@ h6 {
     }
 }
 /* ====ANIMATION==================================================================================================================================================== */
-// ._hide {
-//     transform: translate(0px, 120%);
-//     opacity: 0;
-//     transition: all 1.3s ease 0s;
-// }
-// ._hide2 {
-//     transform: translate(120%, 0px);
-//     opacity: 0;
-//     transition: all 1.8s ease 0s;
-// }
+._hide {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 1.3s ease 0s;
+}
+._hide2 {
+    transform: translate(120%, 0px);
+    opacity: 0;
+    transition: all 1.8s ease 0s;
+}
 
-// ._active {
-//     transform: translate(0px, 0px);
-//     opacity: 1;
-//     transition: all 1.3s ease 0.1s;
-// }
-// ._active2 {
-//     transform: translate(0px, 0px);
-//     opacity: 1;
-//     transition: all 1.8s ease 0.3s;
-// }
+._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 1.3s ease 0.1s;
+}
+._active2 {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 1.8s ease 0.3s;
+}
 
 /* ====ANIMATION=END=================================================================================================================================================== */
 html,
@@ -317,7 +317,7 @@ h1 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     @media (max-width: 1179.98px) {
@@ -342,7 +342,7 @@ h1 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     &__body {
