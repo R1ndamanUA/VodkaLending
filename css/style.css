@@ -472,11 +472,3 @@ a[class=btn]:hover {
   font-size: 28px;
   font-weight: 700;
 }
-
-.bg-attachment {
-  background-attachment: fixed;
-}
-
-.ios .bg-attachment {
-  background-attachment: scroll;
-}
