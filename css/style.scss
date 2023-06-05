@@ -216,6 +216,7 @@ h1 {
 .first-fullscreen {
     background: url("../img/section1bg.webp") left bottom no-repeat fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -223,6 +224,7 @@ h1 {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)) top/100% 20% no-repeat,
             url("../img/section1bg.webp") center bottom no-repeat fixed;
         background-size: cover;
+        -webkit-background-size: cover;
     }
     &__body {
         position: relative;
@@ -304,6 +306,7 @@ h1 {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3)),
         url("../img/section2bg.webp") left bottom no-repeat fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -317,6 +320,7 @@ h1 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -326,6 +330,7 @@ h1 {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        -webkit-background-size: cover;
     }
     &__body {
         & h2 {
@@ -342,6 +347,7 @@ h1 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    -webkit-background-size: cover;
     overflow: hidden;
     display: flex;
     flex-direction: column;
