@@ -156,57 +156,57 @@ if (animItems.length > 0) {
 
 //   animOnScroll();
 // }
-const animItems3 = Array.from(document.querySelectorAll('._anim-items3'));
+// const animItems3 = Array.from(document.querySelectorAll('._anim-items3'));
 
-if (animItems3.length > 0) {
-  document.documentElement.addEventListener('scroll', animOnScroll);
-  document.documentElement.addEventListener('resize', animOnScroll);  
+// if (animItems3.length > 0) {
+//   document.documentElement.addEventListener('scroll', animOnScroll);
+//   document.documentElement.addEventListener('resize', animOnScroll);  
 
-  function animOnScroll() {
-    const windowHeight = window.innerHeight;
-    const scrollY = window.scrollY;
+//   function animOnScroll() {
+//     const windowHeight = window.innerHeight;
+//     const scrollY = window.scrollY;
 
-    for (let index = 0; index < animItems3.length; index++) {
-      const animItem = animItems3[index];
-      const animItemHeight = animItem.offsetHeight;
-      const animItemOffset = offset(animItem).top;
-      const animStart = 0.2; // 20% видимости
+//     for (let index = 0; index < animItems3.length; index++) {
+//       const animItem = animItems3[index];
+//       const animItemHeight = animItem.offsetHeight;
+//       const animItemOffset = offset(animItem).top;
+//       const animStart = 0.2; // 20% видимости
 
-      let animItemPoint = windowHeight - animItemHeight * animStart;
+//       let animItemPoint = windowHeight - animItemHeight * animStart;
 
-      if (document.documentElement.clientWidth <= 768) {
-        // Для мобильных устройств добавляем класс _active, когда верхняя граница элемента становится видимой внизу экрана и видно 20% его высоты
-        if (
-          scrollY > animItemOffset - windowHeight + animItemHeight - animItemPoint &&
-          scrollY < animItemOffset + animItemHeight
-        ) {
-          animItem.classList.add('_active2');
-        } else {
-          if (!animItem.classList.contains('_anim-no-hide')) {
-            animItem.classList.remove('_active2');
-          }
-        }
-      } else {
-        if (scrollY > animItemOffset - animItemPoint && scrollY < animItemOffset + animItemHeight) {
-          animItem.classList.add('_active');
-        } else {
-          if (!animItem.classList.contains('_anim-no-hide')) {
-            animItem.classList.remove('_active');
-          }
-        }
-      }
-    }
-  }
+//       if (document.documentElement.clientWidth <= 768) {
+//         // Для мобильных устройств добавляем класс _active, когда верхняя граница элемента становится видимой внизу экрана и видно 20% его высоты
+//         if (
+//           scrollY > animItemOffset - windowHeight + animItemHeight - animItemPoint &&
+//           scrollY < animItemOffset + animItemHeight
+//         ) {
+//           animItem.classList.add('_active2');
+//         } else {
+//           if (!animItem.classList.contains('_anim-no-hide')) {
+//             animItem.classList.remove('_active2');
+//           }
+//         }
+//       } else {
+//         if (scrollY > animItemOffset - animItemPoint && scrollY < animItemOffset + animItemHeight) {
+//           animItem.classList.add('_active');
+//         } else {
+//           if (!animItem.classList.contains('_anim-no-hide')) {
+//             animItem.classList.remove('_active');
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  function offset(el) {
-    const rect = el.getBoundingClientRect();
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-  }
+//   function offset(el) {
+//     const rect = el.getBoundingClientRect();
+//     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+//   }
 
-  animOnScroll();
-}
+//   animOnScroll();
+// }
 //=======Animation for BOTTLE=================================================================================================================================================
 // const animItems2 = document.querySelectorAll('._anim-items2');
 
