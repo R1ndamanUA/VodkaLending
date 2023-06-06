@@ -157,9 +157,3 @@ if (animItems3.length > 0) {
 // 	}
 // 	animOnScroll();
 // }
-
-var device = navigator.userAgent.toLowerCase();
-var mob = device.match(/(iPad|iPhone|iPod|Android|Silk)/gi);
-        if (mob) {
-            $(".bg-cover").removeClass("bg-fixed");
-        }
