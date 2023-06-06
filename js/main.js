@@ -72,36 +72,35 @@ $(document).ready(function() {
 // 	}
 // 	animOnScroll();
 // }
-const animItems = document.querySelectorAll('._anim-items');
+const animItems = $('._anim-items');
 
 if (animItems.length > 0) {
-	window.addEventListener('scroll', animOnScroll);
-	window.addEventListener('resize', animOnScroll); // Добавлено событие resize
+	$(window).on('scroll', animOnScroll);
+	$(window).on('resize', animOnScroll);
 
 	function animOnScroll() {
-		$('*').off('scroll', animOnScroll);
-		for (let index = 0; index < animItems.length; index++) {
-			const animItem = animItems[index];
-			const animItemHeight = animItem.offsetHeight;
-			const animItemOffset = offset(animItem).top;
+		animItems.each(function() {
+			const animItem = $(this);
+			const animItemHeight = animItem.innerHeight();
+			const animItemOffset = animItem.offset().top;
 			const animStart = 4;
 
-			let animItemPoint = window.innerHeight - animItemHeight / animStart;
-			if (animItemHeight > window.innerHeight) {
-				animItemPoint = window.innerHeight - window.innerHeight / animStart;
+			let animItemPoint = $(window).height() - animItemHeight / animStart;
+			if (animItemHeight > $(window).height()) {
+				animItemPoint = $(window).height() - $(window).height() / animStart;
 			}
 
 			if (
-				(pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) ||
-				(window.pageYOffset > animItemOffset - window.innerHeight && window.pageYOffset < animItemOffset + animItemHeight) // Добавлено условие для скроллинга внутри элементов
+				($(window).scrollTop() > animItemOffset - animItemPoint && $(window).scrollTop() < animItemOffset + animItemHeight) ||
+				(animItemOffset < $(window).scrollTop() && animItemOffset + animItemHeight > $(window).scrollTop())
 			) {
-				animItem.classList.add('_active');
+				animItem.addClass('_active');
 			} else {
-				if (!animItem.classList.contains('_anim-no-hide')) {
-					animItem.classList.remove('_active');
+				if (!animItem.hasClass('_anim-no-hide')) {
+					animItem.removeClass('_active');
 				}
 			}
-		}
+		});
 	}
 
 	function offset(el) {
