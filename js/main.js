@@ -156,11 +156,11 @@ if (animItems.length > 0) {
 
 //   animOnScroll();
 // }
-const animItems3 = document.querySelectorAll('._anim-items3');
+const animItems3 = Array.from(document.querySelectorAll('._anim-items3'));
 
 if (animItems3.length > 0) {
-  window.addEventListener('scroll', animOnScroll);
-  window.addEventListener('resize', animOnScroll);
+  document.documentElement.addEventListener('scroll', animOnScroll);
+  document.documentElement.addEventListener('resize', animOnScroll);  
 
   function animOnScroll() {
     const windowHeight = window.innerHeight;
@@ -174,7 +174,7 @@ if (animItems3.length > 0) {
 
       let animItemPoint = windowHeight - animItemHeight * animStart;
 
-      if (window.innerWidth <= 768) {
+      if (document.documentElement.clientWidth <= 768) {
         // Для мобильных устройств добавляем класс _active, когда верхняя граница элемента становится видимой внизу экрана и видно 20% его высоты
         if (
           scrollY > animItemOffset - windowHeight + animItemHeight - animItemPoint &&
