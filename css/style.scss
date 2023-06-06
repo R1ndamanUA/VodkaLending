@@ -107,12 +107,6 @@ h6 {
     opacity: 0;
     transition: all 1.3s ease 0s;
 }
-._hide2 {
-    transform: translate(120%, 0px);
-    opacity: 0;
-    transition: all 1.8s ease 0s;
-}
-
 ._active {
     transform: translate(0px, 0px);
     opacity: 1;
@@ -348,9 +342,13 @@ h1 {
     -o-background-size: cover;
     background-size: cover;
 }
+
 .bg-fixed {
-    background-attachment: fixed;
+    @media (min-width: 1366px) {
+        background-attachment: fixed;
+    }
 }
+
 .footer {
     background: #193b6f;
     display: flex;

@@ -35,43 +35,7 @@ $(document).ready(function() {
     }
   });
 //=========END COOKIE AND AGE===============================================================================================================================================
-//=======Animation for TITLE=================================================================================================================================================
-
-// const animItems = document.querySelectorAll('._anim-items');
-
-// if (animItems.length > 0) {
-// 	window.addEventListener('scroll', animOnScroll);
-// 	function animOnScroll() {
-// 		$('*').off('scroll', animOnScroll);
-// 		for (let index = 0; index < animItems.length; index++) {
-// 			const animItem = animItems[index];
-// 			const animItemHeight = animItem.offsetHeight;
-// 			const animItemOffset = offset(animItem).top;
-// 			const animStart = 4;
-
-// 			let animItemPoint = window.innerHeight - animItemHeight / animStart;
-// 			if (animItemHeight > window.innerHeight) {
-// 				animItemPoint = window.innerHeight - window.innerHeight / animStart;
-// 			}
-
-// 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-// 				animItem.classList.add('_active');
-
-// 			} else {
-// 				if (!animItem.classList.contains('_anim-no-hide')) {
-// 					animItem.classList.remove('_active');
-// 				}
-// 			}
-// 		}
-// 	}
-// 	function offset(el) {
-// 		const rect = el.getBoundingClientRect(),
-// 			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-// 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-// 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-// 	}
-// 	animOnScroll();
-// }
+//=======Animation=================================================================================================================================================
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -107,139 +71,43 @@ if (animItems.length > 0) {
   
   animOnScroll();
 }
-//=======Animation for TEXT=================================================================================================================================================
+//========================================================================================================================================================
+const animItems2 = document.querySelectorAll('._anim-items2');
 
-// const animItems3 = document.querySelectorAll('._anim-items3');
+if (animItems2.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
+  
+  function animOnScroll() {
+    for (let index = 0; index < animItems2.length; index++) {
+      const animItem = animItems2[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = offset(animItem).top;
+      const animStart = 4;
+      
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+      
+      if ((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)) {
+        animItem.classList.add('_active2');
+      } else {
+        if (!animItem.classList.contains('_anim-no-hide')) {
+          animItem.classList.remove('_active2');
+        }
+      }
+    }
+  }
+  
+  function offset(el) {
+    const rect = el.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left }
+  }
+  
+  animOnScroll();
+}
 
-// if (animItems3.length > 0) {
-//   window.addEventListener('scroll', animOnScroll);
-//   window.addEventListener('resize', animOnScroll);
 
-//   function animOnScroll() {
-//     const windowHeight = window.innerHeight;
-
-//     for (let index = 0; index < animItems3.length; index++) {
-//       const animItem = animItems3[index];
-//       const animItemHeight = animItem.offsetHeight;
-//       const animItemOffset = offset(animItem).top;
-//       const animStart = 0.2; // 20% видимости
-
-//       let animItemPoint = windowHeight - animItemHeight * animStart;
-
-//       if (window.innerWidth <= 768) {
-//         // Для мобильных устройств добавляем класс _active, когда верхняя граница элемента становится видимой внизу экрана и видно 20% его высоты
-//         if (pageYOffset > animItemOffset - windowHeight + animItemHeight - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
-//           animItem.classList.add('_active2');
-//         } else {
-//           if (!animItem.classList.contains('_anim-no-hide')) {
-//             animItem.classList.remove('_active2');
-//           }
-//         }
-//       } else {
-//         if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
-//           animItem.classList.add('_active');
-//         } else {
-//           if (!animItem.classList.contains('_anim-no-hide')) {
-//             animItem.classList.remove('_active2');
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   function offset(el) {
-//     const rect = el.getBoundingClientRect();
-//     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-//   }
-
-//   animOnScroll();
-// }
-// const animItems3 = Array.from(document.querySelectorAll('._anim-items3'));
-
-// if (animItems3.length > 0) {
-//   document.documentElement.addEventListener('scroll', animOnScroll);
-//   document.documentElement.addEventListener('resize', animOnScroll);  
-
-//   function animOnScroll() {
-//     const windowHeight = window.innerHeight;
-//     const scrollY = window.scrollY;
-
-//     for (let index = 0; index < animItems3.length; index++) {
-//       const animItem = animItems3[index];
-//       const animItemHeight = animItem.offsetHeight;
-//       const animItemOffset = offset(animItem).top;
-//       const animStart = 0.2; // 20% видимости
-
-//       let animItemPoint = windowHeight - animItemHeight * animStart;
-
-//       if (document.documentElement.clientWidth <= 768) {
-//         // Для мобильных устройств добавляем класс _active, когда верхняя граница элемента становится видимой внизу экрана и видно 20% его высоты
-//         if (
-//           scrollY > animItemOffset - windowHeight + animItemHeight - animItemPoint &&
-//           scrollY < animItemOffset + animItemHeight
-//         ) {
-//           animItem.classList.add('_active2');
-//         } else {
-//           if (!animItem.classList.contains('_anim-no-hide')) {
-//             animItem.classList.remove('_active2');
-//           }
-//         }
-//       } else {
-//         if (scrollY > animItemOffset - animItemPoint && scrollY < animItemOffset + animItemHeight) {
-//           animItem.classList.add('_active');
-//         } else {
-//           if (!animItem.classList.contains('_anim-no-hide')) {
-//             animItem.classList.remove('_active');
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   function offset(el) {
-//     const rect = el.getBoundingClientRect();
-//     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-//   }
-
-//   animOnScroll();
-// }
-//=======Animation for BOTTLE=================================================================================================================================================
-// const animItems2 = document.querySelectorAll('._anim-items2');
-
-// if (animItems2.length > 0) {
-// 	window.addEventListener('scroll', animOnScroll2);
-// 	function animOnScroll2() {
-// 		$('*').off('scroll', animOnScroll2);
-// 		for (let index = 0; index < animItems2.length; index++) {
-// 			const animItem = animItems2[index];
-// 			const animItemHeight = animItem.offsetHeight;
-// 			const animItemOffset = offset(animItem).top;
-// 			const animStart = 8;
-
-// 			let animItemPoint = window.innerHeight - animItemHeight / animStart;
-// 			if (animItemHeight > window.innerHeight) {
-// 				animItemPoint = window.innerHeight - window.innerHeight / animStart;
-// 			}
-
-// 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-// 				animItem.classList.add('_active2');
-
-// 			} else {
-// 				if (!animItem.classList.contains('_anim-no-hide')) {
-// 					animItem.classList.remove('_active2');
-// 				}
-// 			}
-// 		}
-// 	}
-// 	function offset(el) {
-// 		const rect = el.getBoundingClientRect(),
-// 			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-// 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-// 		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-// 	}
-// 	animOnScroll();
-// }
+var scene = document.getElementById('parallax');
+var parallaxInstance = new Parallax(scene);
