@@ -360,7 +360,6 @@ h1 {
 
 .bg-cover {
   background-size: cover;
-  -webkit-background-size: cover;
 }
 
 .bg-fixed {
