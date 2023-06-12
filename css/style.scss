@@ -92,13 +92,13 @@ h6 {
 /*--------------------*/
 @keyframes float {
     0% {
-        transform: translatex(0px);
+        transform: translatex(10px);
     }
     50% {
-        transform: translatex(-20px);
+        transform: translatex(-10px);
     }
     100% {
-        transform: translatex(0px);
+        transform: translatex(10px);
     }
 }
 /* ====ANIMATION==================================================================================================================================================== */
@@ -164,6 +164,7 @@ h1 {
 .fullscreen {
     min-height: 100vh;
     &__body {
+        position: relative;
         max-width: 1200px;
         margin: 0 auto;
         width: 100%;
@@ -174,6 +175,10 @@ h1 {
         justify-content: center;
         flex: 1 1 auto;
         padding: 0px 30px 0px;
+        @media (max-width: 767.98px) {
+            flex-wrap: wrap;
+            padding: 60px 30px;
+        }
     }
 
     &__title {
@@ -193,6 +198,12 @@ h1 {
         max-width: 760px;
         text-align: justify;
         z-index: 2;
+    }
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        max-width: 630px;
     }
     @media (max-width: 767.98px) {
         h2 {
@@ -221,8 +232,9 @@ h1 {
         padding-top: 200px;
         & img {
             position: absolute;
-            right: 0;
-            bottom: -80px;
+            right: 20px;
+            bottom: 0;
+            height: 85%;
             animation: float 6s ease-in-out infinite;
             z-index: 3;
         }
@@ -234,7 +246,7 @@ h1 {
                 max-width: 700px;
             }
             img {
-                height: 90%;
+                height: 75%;
             }
         }
         @media (max-width: 1023.98px) {
@@ -245,7 +257,7 @@ h1 {
                 max-width: 600px;
             }
             img {
-                height: 90%;
+                height: 70%;
             }
         }
         @media (max-width: 899.98px) {
@@ -270,7 +282,7 @@ h1 {
             }
             img {
                 position: static;
-                width: 33%;
+                width: 25%;
             }
         }
         @media (max-width: 660.98px) {
@@ -281,7 +293,7 @@ h1 {
         @media (max-width: 549.98px) {
             padding-top: 149px;
             img {
-                width: 45%;
+                width: 35%;
             }
         }
         @media (max-width: 410.98px) {
@@ -297,9 +309,23 @@ h1 {
         url("../img/section2bg.webp") left bottom no-repeat;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     &__body {
-        margin-top: -130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        img {
+            height: 100%;
+            max-width: 100%;
+        }
+        @media (max-width: 767.98px) {
+            flex-direction: column-reverse;
+            img {
+                max-width: 66%;
+            }
+        }
     }
 }
 .third-fullscreen {
@@ -313,6 +339,9 @@ h1 {
             url("../img/section3bg.webp") 83% bottom no-repeat;
     }
     &__body {
+        @media (max-width: 767.98px) {
+            align-items: center;
+        }
         & h2 {
             max-width: 630px;
         }
@@ -323,16 +352,32 @@ h1 {
 }
 .fourth-fullscreen {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)),
-        url("../img/section4bg.webp") left bottom no-repeat;
+        url("../img/section4bg.webp") center no-repeat;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     &__body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            height: 100%;
+            max-width: 100%;
+        }
         & h2 {
             max-width: 630px;
         }
         & p {
             max-width: 630px;
+        }
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            img {
+                height: 100%;
+                max-width: 66%;
+            }
         }
     }
 }
