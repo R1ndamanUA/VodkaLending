@@ -162,7 +162,7 @@ body {
   }
 }
 
-h1 {
+.title--hidden {
   position: absolute;
   top: 0;
   left: 0;
@@ -472,28 +472,36 @@ h1 {
   max-width: 640px;
   margin: 10% auto 0;
   text-align: center;
-  background: #fff url("https://github.com/demersdesigns/ds_landing/blob/master/img/message_box_bg.png?raw=true") center 20px no-repeat;
+  background: rgba(25, 59, 111, 0.5098039216);
   position: relative;
   border-radius: 5px;
   padding: 30px;
   z-index: 1001;
+}
+.message_box h4 {
+  color: #ffffff;
+  padding-top: 20px;
+}
+.message_box a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 a[class=btn] {
   display: inline-block;
   margin: 0 auto;
   padding: 0.5em;
-  background: #fff;
-  border: 1px solid #193b6f;
+  background: transparent;
+  border: 1px solid #ffffff;
   border-radius: 5px;
-  color: #193b6f;
+  color: #ffffff;
   transition: all 0.5s;
   width: 75px;
 }
 a[class=btn]:hover {
-  color: #fff;
-  border: 1px solid #fff;
-  background: #193b6f;
+  color: #193b6f;
+  border: 1px solid transparent;
+  background: #fff;
 }
 
 .age_check {
@@ -515,7 +523,7 @@ a[class=btn]:hover {
   margin-right: 20px;
 }
 .message_box h3 {
-  color: #193b6f;
+  color: #ffffff;
   font-size: 24px;
   margin-bottom: 30px;
 }
@@ -523,4 +531,16 @@ a[class=btn]:hover {
   color: #e20d0d;
   font-size: 28px;
   font-weight: 700;
+}
+
+.privacy-policy {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  padding: 50px 20px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.privacy-policy h1 {
+  font-size: 24px;
 }
